@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, orientation=portrait" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>BEML Kiosk</title>
+
+  <style>
+    /* ===================== PAGE HIT COUNTER ===================== */
+    .page-counter {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+    }
+
+    .page-counter a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: 2px solid #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .page-counter a:hover {
+      background-color: #f0f0f0;
+      border-color: #f0f0f0;
+      transform: scale(1.03);
+    }
+
+    .page-counter a img {
+      height: 22px;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    /* ===================== EXISTING STYLES ===================== */
+    .text a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: 2px solid #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .text a:hover {
+      background-color: #f0f0f0;
+      border-color: #f0f0f0;
+      transform: scale(1.03);
+    }
+
+    .text a img {
+      height: 22px;
+      width: auto;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <section class="showcase">
+    <header>
+      <img class="logo" src="./assets/logo.png" alt="BEML logo" />
+    </header>
+
+    <video src="./assets/landingVideo.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+
+    <div class="text">
+      <div class="text-bg"></div>
+      <h2>BEML LIMITED</h2>
+      <h3>Beyond Possibilities</h3>
+
+      <a href="./verticals_template/verticals-new.html">
+        <img src="./assets/infinix.png" alt="BEML logo" />
+        Explore
+      </a>
+    </div>
+
+    <!-- Page Counter (styled same as Explore button) -->
+    <div class="page-counter">
+      <a href="#">
+        <img src="./assets/infinix.png" alt="Infinix logo" />
+        Visits: <span id="hitCount">0</span>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    // ===================== PAGE HIT COUNTER LOGIC =====================
+    const counter = document.getElementById("hitCount");
+    let hits = localStorage.getItem("page_hits");
+
+    if (!hits) {
+      hits = 1;
+    } else {
+      hits = Number(hits) + 1;
+    }
+
+    localStorage.setItem("page_hits", hits);
+    counter.textContent = hits;
+  </script>
+</body>
+</html>
