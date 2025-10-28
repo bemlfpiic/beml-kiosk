@@ -1,0 +1,170 @@
+/* ===================== GLOBAL RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===================== BODY BACKGROUND ===================== */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../assets/bg.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===================== HEADER ITEMS ===================== */
+.back-gallery {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  background: #cc5500;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1000;
+  text-decoration: none;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.back-gallery:hover {
+  background: #aa4400;
+  letter-spacing: 2px;
+}
+
+.beml-logo {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1000;
+}
+
+/* ===================== MAIN CONTENT LAYOUT ===================== */
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 130px auto 60px;
+  padding: 20px;
+  gap: 40px;
+}
+
+/* ===================== IMAGE SECTION ===================== */
+.product-image {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-image img {
+  width: 95%;
+  max-width: 420px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.video-btn {
+  background-color: #cc5500;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.video-btn:hover {
+  background-color: #aa4400;
+  letter-spacing: 2px;
+}
+
+/* ===================== DETAILS SECTION ===================== */
+.product-details {
+  flex: 1 1 45%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.product-title {
+  font-size: 2rem;
+  color: #cc5500;
+}
+
+.product-subtitle {
+  font-size: 1.2rem;
+  color: #aa4400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.product-table-title {
+  font-size: 1.1rem;
+  color: #cc5500;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.product-table th, 
+.product-table td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
